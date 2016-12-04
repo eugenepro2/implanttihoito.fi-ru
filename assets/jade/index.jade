@@ -1,0 +1,356 @@
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		title Лечение и имплантация зубов в Финляндии и Эстонии с русскоязычными докторами и европейскими гарантиями
+		link(rel='apple-touch-icon', sizes='60x60', href='favicons/apple-touch-icon.png')
+		link(rel='icon', type='image/png', href='favicons/favicon-32x32.png', sizes='32x32')
+		link(rel='icon', type='image/png', href='favicons/favicon-16x16.png', sizes='16x16')
+		link(rel='manifest', href='favicons/manifest.json')
+		link(rel='mask-icon', href='favicons/safari-pinned-tab.svg', color='#5bbad5')
+		meta(name='theme-color', content='#ffffff')
+		link(rel="stylesheet", href="http://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css")
+		link(href="https://fonts.googleapis.com/css?family=Roboto:300&amp;subset=cyrillic" rel="stylesheet")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css")
+		link(rel="stylesheet", href="css/jquery.periodpicker.min.css")
+		link(rel="stylesheet", href="css/tingle.css")
+		link(rel="stylesheet", href="css/styles.css")
+		link(rel="stylesheet", href="css/font.css")
+	body
+		nav.menu(data-gumshoe-header)
+			.container
+				.row.middle-xs.center-xs
+					.col-xs-10
+						ul.menu__list.flex(data-gumshoe)
+							li.menu__list__item.active
+								a.active(href="#services") Наши услуги
+							li.menu__list__item 
+								a(href="#callback") Записаться на консультацию
+							li.menu__list__item 
+								a(href="#review") Отзывы
+							li.menu__list__item 
+								a(href="#") Почему выбирают нас
+							li.menu__list__item 
+								a(href="#") О нас
+							li.menu__list__item 
+								a(href="#") Сертификаты
+							li.menu__list__item 
+								a(href="#") Контакты
+		header.header
+			.container
+				.row.middle-xs
+					.col-xs-3
+						.header__logo
+							img(src="img/logo.png", alt="Логотип")
+					.col-xs-3
+						.header__description
+							p Сеть стоматологических клиник<br> в Финляндии и Эстонии
+					.col-xs-6.end-xs
+						.header__callback
+							p.header__callback__phone  <i class="icon-call-answer"></i>0207205808
+							a(onclick="modalCallBack.open()").order.call Заказать звонок
+		section.offer
+			.container
+				.row.middle-xs
+					.col-xs-8
+						h1.offer__heading Лечение и имплантация зубов в Финляндии и Эстонии с русскоязычными докторами и европейскими гарантиями
+						ul.offer__list
+							li.offer__list__item — Уникальная система лечения без боли и стресса
+							li.offer__list__item — Стоматологии в Финляндии и Эстонии
+							li.offer__list__item — Низкие цены
+						a.order.offer__order.cons(onclick="modalCallBack.open()") Заказать консультацию
+					.col-xs-4
+		section.services#services
+			.container
+				.row.center-xs
+					.col-xs-12
+						h2.heading Наши услуги
+				.row
+					.col-xs-3
+						ul.services__list
+							li(data-image="img/services-teeth.png" data-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores nihil, nesciunt labore velit! Optio fuga aperiam, a ratione officiis repellat odit culpa excepturi voluptas, animi dolores in minima cum alias.")
+								span Керамические коронки и мосты
+							hr
+							li(data-image="img/services-teeth.png" data-text="Lorem2 ipsum dolor sit amet, consectetur adipisicing elit. Maiores nihil, nesciunt labore velit! Optio fuga aperiam, a ratione officiis repellat odit culpa excepturi voluptas, animi dolores in minima cum alias.")
+								span Компьютерная аксиальная томография
+							hr
+							li(data-image="img/services-teeth.png" data-text="Lorem3 ipsum dolor sit amet, consectetur adipisicing elit. Maiores nihil, nesciunt labore velit! Optio fuga aperiam, a ratione officiis repellat odit culpa excepturi voluptas, animi dolores in minima cum alias.")
+								span Пародонтальная хирургия
+					.col-xs-6.center-xs
+						img(src="img/services-teeth.png", alt="")
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores nihil, nesciunt labore velit! Optio fuga aperiam, a ratione officiis repellat odit culpa excepturi voluptas, animi dolores in minima cum alias.
+					.col-xs-3
+						ul.services__list
+							li(data-image="img/services-teeth.png" data-text="Lorem4 ipsum dolor sit amet, consectetur adipisicing elit. Maiores nihil, nesciunt labore velit! Optio fuga aperiam, a ratione officiis repellat odit culpa excepturi voluptas, animi dolores in minima cum alias.")
+								span Имплантологии
+							hr
+							li(data-image="img/services-teeth.png" data-text="Lorem5 ipsum dolor sit amet, consectetur adipisicing elit. Maiores nihil, nesciunt labore velit! Optio fuga aperiam, a ratione officiis repellat odit culpa excepturi voluptas, animi dolores in minima cum alias.")
+								span Искусственном замещении кости
+							hr
+							li(data-image="img/services-teeth.png" data-text="Lorem6 ipsum dolor sit amet, consectetur adipisicing elit. Maiores nihil, nesciunt labore velit! Optio fuga aperiam, a ratione officiis repellat odit culpa excepturi voluptas, animi dolores in minima cum alias.")
+								span Синус-лифтинг
+		section.guarantee#guarantee
+			.container
+				.row.middle-xs
+					.col-xs-offset-1
+					.col-xs-6
+						h2.heading Наши гарантии
+						p.guarantee__text Implanttihoito - оплатит все затраты на стоматологическую и лабораторную работу, необходимую для корректировки возникших проблем. В случае мелких исправлений вы можете обратиться к местному стоматологу в вашей стране и выслать счет Implanttihoito с целью оплаты.
+						p.guarantee__text Наша клиника выделяет максимум 50,00 евро на такие исправления, как повторное цементирование коронок или подгонка частичных и полных протезов.
+		section.callback#callback
+			.container
+				.row.center-xs.middle-xs
+					.col-xs-8
+						.callback__block
+							.row.middle-xs
+								.col-xs-7.start-md
+									h2.heading Приходите на первую бесплатную консультацию 
+									p.callback__block__text Заполните форму заявки, и наш специалист свяжется с вами в ближайшее время, чтобы записать на удобное время
+									a.order.callback__order.cons(onclick="modalCallBack.open()") Оставить заявку
+		section.free-consultation
+			.container
+				.row.center-xs
+					.col-xs-7
+						h2.heading.heading__big Бесплатная Online консультация
+						p.free-consultation__text У на сесть возможность проводить онлайн консультацию, поэтому нужно этот блок тоже сделать, суть простая, доктор может через сервис ответить на вопросы и рассказать как строится лечение.
+				.row.center-xs
+					.col-xs-4
+						figure.free-consultation__block
+							i.icon-notebook.free-consultation__block__image
+							p.free-consultation__block__text Оставляете заявку
+					.col-xs-4
+						figure.free-consultation__block
+							i.icon-clock.free-consultation__block__image
+							p.free-consultation__block__text Назначается время
+					.col-xs-4
+						figure.free-consultation__block.none
+							i.icon-man.free-consultation__block__image
+							p.free-consultation__block__text Подключаетесь через компьютер или телефон к сервису 
+								a(onclick="hang.open();") hangouts.google.com
+		section.callback-2
+			.container
+				.row.center-xs.middle-xs
+					.col-xs-9
+						.callback-2__block
+							.row.no-margin
+								.col-xs-6.no-margin
+									.swiper-container
+										.swiper-wrapper
+											.swiper-slide(style="background: url('img/slider.png')")
+											.swiper-slide(style="background: url('img/slider.png')")
+											.swiper-slide(style="background: url('img/slider.png')")
+											.swiper-slide(style="background: url('img/slider.png')")
+										// Add Pagination
+										.swiper-pagination
+									.callback-2__block__text--block.flex
+										p У на сесть возможность проводить онлайн консультацию, поэтому нужно этот блок тоже сделать, суть простая, доктор может через сервис ответить на вопросы и рассказать как строится лечение.
+								.col-xs-6.no-margin
+									form(action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads2095140000000141078 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory()' accept-charset='UTF-8').form
+										script.
+											var mndFileds=new Array('Last Name');
+											var fldLangVal=new Array('Фамилия');
+											var name='';
+											var email='';
+										// Do not remove this code.
+										// Do not remove this code.
+										input(type='text', style='display:none;', name='xnQsjsdp', value='b736e124c72f5718ba68e275ec5ccc77efe6e22b7f7f2a2af638ff35f8bd3582')
+										input(type='hidden', name='zc_gad', value='')
+										input(type='text', style='display:none;', name='xmIwtLD', value='3b01bdb55a45a7b0bfc639d6a7eb599c81c6831cb059d9c47fe118b076821f8f')
+										input(type='text', style='display:none;', name='actionType', value='TGVhZHM=')
+										input(type='text', style='display:none;', name='returnURL', value='http://implanttihoito.fi/ru')
+										// Do not remove this code.
+										// Do not remove this code.
+										h2.heading.heading__form Оставьте заявку<br> на обратный звонок
+										p.form__text Оставтье заявку и мы перезвоним вам<br> в ближайшее время
+										input.dynamic_inputs(type="hidden" name="LEADCF14" data-utm="campaign" value="" max-length="250" placeholder="Кампания")
+										input.dynamic_inputs(type="hidden" name="LEADCF16" data-utm="term"     value="" max-length="250" placeholder="Ключевой запрос")
+										input.dynamic_inputs(type="hidden" name="LEADCF11" data-utm="source" max-length="250" placeholder="Рекламный канал")
+										input(type="hidden" name="LEADCF12" max-length="250" placeholder="Целевое действие" class="goal")
+										input(type="hidden" name="LEADCF15" value="<?php echo $query;?>"      max-length="250" placeholder="Поисковый запрос")
+										input(type="hidden" name="LEADCF13" value="<?php echo $actual_link?>" max-length="250" placeholder="Посадочная страница")
+										input(type="hidden" name="LEADCF17" value="<?php echo $referer;?>"    max-length="250" placeholder="Источник (реф.хвос)")
+										.flex.fd
+											input.form__name(type="text" name="Last Name" placeholder="Ваше имя")
+											input.form__phone(type="tel" name="Mobile" placeholder="Ваш телефон")
+											input.order.callback__order(type="submit" value="Отправить")
+		section.review
+			.container
+				.row
+					.col-xs-12.center-xs
+						h2.heading Отзывы наших клиентов
+				.line
+				.row.center-xs.review__block
+					.col-xs-2.start-xs
+						.review__block__image
+							img(src="img/review.png", alt="")
+					.col-xs-6.start-xs
+						p.review__block__heading Генрих Штанмайер
+						p.review__block__text Добрый день.Хотела бы сказать огромное спасибо всему персоналу клиники Дент Мастер за ВСЁ! Главное, за правильное отношение к своей работе. Особенное впечатление производит профессионализм, начиная от чистки зубов до протезирования. вся моя семья побывала здесь. деток ведут опытные стоматологи, проводятся своевременно проф.осмотры. Сама я очень благодарна Евгений Владимирович - вылечил все зубы внимательно и добросовестно. Ну и, конечно,замечательным хирургу и ортопеду у которых просто золотые руки Владимиру Анатольевичу и Валентину Витальевичу. Профессиональны, корректены, внимателены. Спасибо всем! Рекомендую всем знакомым без сомнения!
+				.row.center-xs.review__block
+					.col-xs-2.start-xs
+						.review__block__image
+							img(src="img/review.png", alt="")
+					.col-xs-6.start-xs
+						p.review__block__heading Генрих Штанмайер
+						p.review__block__text Добрый день.Хотела бы сказать огромное спасибо всему персоналу клиники Дент Мастер за ВСЁ! Главное, за правильное отношение к своей работе. Особенное впечатление производит профессионализм, начиная от чистки зубов до протезирования. вся моя семья побывала здесь. деток ведут опытные стоматологи, проводятся своевременно проф.осмотры. Сама я очень благодарна Евгений Владимирович - вылечил все зубы внимательно и добросовестно. Ну и, конечно,замечательным хирургу и ортопеду у которых просто золотые руки Владимиру Анатольевичу и Валентину Витальевичу. Профессиональны, корректены, внимателены. Спасибо всем! Рекомендую всем знакомым без сомнения!
+				.new__review
+					.item
+						.row.center-xs.review__block
+							.col-xs-2.start-xs
+								.review__block__image
+									img(src="img/review.png", alt="")
+							.col-xs-6.start-xs
+								p.review__block__heading Генрих Штанмайер
+								p.review__block__text Добрый день.Хотела бы сказать огромное спасибо всему персоналу клиники Дент Мастер за ВСЁ! Главное, за правильное отношение к своей работе. Особенное впечатление производит профессионализм, начиная от чистки зубов до протезирования. вся моя семья побывала здесь. деток ведут опытные стоматологи, проводятся своевременно проф.осмотры. Сама я очень благодарна Евгений Владимирович - вылечил все зубы внимательно и добросовестно. Ну и, конечно,замечательным хирургу и ортопеду у которых просто золотые руки Владимиру Анатольевичу и Валентину Витальевичу. Профессиональны, корректены, внимателены. Спасибо всем! Рекомендую всем знакомым без сомнения!
+				.row.center-xs
+					a.order.order-review Показать еще отзыв
+		section.about#review
+			.container
+				.row
+					.col-xs-12.center-xs
+						h2.heading О клинике
+					.col-xs-4
+						.row
+							.col-xs-2.col-number
+								p.about__number 01
+							.col-xs-1.col-line
+								.about__line
+							.col-xs-9.start-xs
+								p.about__text Implanttihoito - ведущая в Финляндии и Эстонии сеть стоматологических клиник в области имплантологии и эстетической стоматологии.
+					.col-xs-4
+						.row
+							.col-xs-2
+								p.about__number 02
+							.col-xs-1
+								.about__line
+							.col-xs-9.start-xs
+								p.about__text Клиника специализируется на имплантологии, искусственном замещении кости, синус-лифтинг, пародонтальная хирургия, компьютерная аксиальная томография (КТ-сканирование), а также керамические коронки и мосты.
+					.col-xs-4
+						.row
+							.col-xs-2
+								p.about__number 03
+							.col-xs-1
+								.about__line
+							.col-xs-9.start-xs
+								p.about__text Имеет отличную репутацию на международном уровне, особенно в сфере сложного эстетического лечения.
+					.col-xs-4
+						.row
+							.col-xs-2
+								p.about__number 04
+							.col-xs-1
+								.about__line
+							.col-xs-9.start-xs
+								p.about__text Являемся одним из пионеров без стрессовой стоматологии в Скандинавии и обеспечивает пациентам высокий уровень комфорта.
+					.col-xs-4
+						.row
+							.col-xs-2
+								p.about__number 05
+							.col-xs-1
+								.about__line
+							.col-xs-9.start-xs
+								p.about__text Высокопрофессиональные стоматологи, стоматологи-гигиенисты, медсестры и координаторы тесно сотрудничают вместе, тем самым обеспечивая высокое качество стоматологических услуг и комфорт для каждого пациента.
+		section.step
+			.container
+				.row.center-xs
+					.col-xs-12
+						h2.heading Этапы лечения
+					.col-xs-4.step__block.none
+						img(src="img/step-1.png", alt="")
+						p.step__heading Импланты
+						p.step__text Консультация
+						ul.step__list
+							li.step__list__item 
+								span Хирургия
+							li.step__list__item 
+								span Импланаталогия
+							li.step__list__item 
+								span Протетика
+					.col-xs-4.step__block
+						img(src="img/step-2.png", alt="")
+						p.step__heading Коронки
+						p.step__text Консультация
+						ul.step__list
+							li.step__list__item 
+								span 1-й этап (подготовка)
+							li.step__list__item 
+								span 2-й этап (цементировка)
+					.col-xs-4.step__block
+						img(src="img/step-3.png", alt="")
+						p.step__heading Общий наркоз
+						p.step__text Консультация
+						ul.step__list
+							li.step__list__item 
+								span 1-й этап (предоплата)
+							li.step__list__item 
+								span 2-й этап (лечение)
+		.flex
+			a(data-target="#map" data-shown-text="Скрыть карту" data-hidden-text="Развернуть карту").order.map__order#map__order Развернуть карту
+		#map
+		footer.footer
+			.container
+				.row.middle-xs
+					.col-xs-2.footer__block
+						p.footer__heading Helsinki
+						p.footer__text Puustellinrinne 3,<br>00410 Ma-Pe 08-16
+					.col-xs-2.footer__block
+						p.footer__heading Pori
+						p.footer__text Luodontie 6, <br>28330 Ma-Pe 8-16
+					.col-xs-2.footer__block
+						p.footer__heading Jyv<span>ä</span>skyl<span>ä</span
+						p.footer__text Hannikaisenkatu 11-13,<br>40100 Ma-Pe 8-16
+					.col-xs-2.footer__block
+						p.footer__heading Tampere
+						p.footer__text Tullikatu 6,<br>33100 Ma-To: 08-20,<br>Pe: 08-16
+					.col-xs-2.footer__block
+						p.footer__heading Tallinn
+						p.footer__text Kotkapoja 2A,<br>11315 Ma-To: 08-20,<br>Pe: 08-16
+
+		.call--back--modal(style="display:none")
+			.row.center-xs
+				form(action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads2095140000000141078 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory()' accept-charset='UTF-8').form
+					script.
+						var mndFileds=new Array('Last Name');
+						var fldLangVal=new Array('Фамилия');
+						var name='';
+						var email='';
+					// Do not remove this code.
+					// Do not remove this code.
+					input(type='text', style='display:none;', name='xnQsjsdp', value='b736e124c72f5718ba68e275ec5ccc77efe6e22b7f7f2a2af638ff35f8bd3582')
+					input(type='hidden', name='zc_gad', value='')
+					input(type='text', style='display:none;', name='xmIwtLD', value='3b01bdb55a45a7b0bfc639d6a7eb599c81c6831cb059d9c47fe118b076821f8f')
+					input(type='text', style='display:none;', name='actionType', value='TGVhZHM=')
+					input(type='text', style='display:none;', name='returnURL', value='http://implanttihoito.fi/ru')
+					// Do not remove this code.
+					// Do not remove this code.
+					input#hours(name='LEADCF91hour', required='true', style='display: none;', type='text')
+					input#minutes(name='LEADCF91minute', required='true', style='display: none;', type='text')
+					input#hours12(name='LEADCF91ampm', required='true', style='display: none;', type='text')
+					input#date(name='LEADCF91', required='true', style='display: none;', type='text')
+					h2.heading.heading__form Оставьте заявку<br> на обратный звонок
+					p.form__text Оставтье заявку и мы перезвоним вам<br> в ближайшее время
+					input(type="text" name="Last Name" placeholder="Фамилия" maxlength="80" required)
+					input(type="text" name="Mobile" placeholder="Моб. телефон" maxlength="30")
+					input(type="text" name="Email" placeholder="Эл. почта")
+					input.dynamic_inputs(type="hidden" name="LEADCF14" data-utm="campaign" value="" max-length="250" placeholder="Кампания")
+					input.dynamic_inputs(type="hidden" name="LEADCF16" data-utm="term"     value="" max-length="250" placeholder="Ключевой запрос")
+					input.dynamic_inputs(type="hidden" name="LEADCF11" data-utm="source" max-length="250" placeholder="Рекламный канал")
+					input(type="hidden" name="LEADCF12" max-length="250" placeholder="Целевое действие" class="goal")
+					input(type="hidden" name="LEADCF15" value="<?php echo $query;?>"      max-length="250" placeholder="Поисковый запрос")
+					input(type="hidden" name="LEADCF13" value="<?php echo $actual_link?>" max-length="250" placeholder="Посадочная страница")
+					input(type="hidden" name="LEADCF17" value="<?php echo $referer;?>"    max-length="250" placeholder="Источник (реф.хвос)")
+					div.form__block.full--width
+						p.form__text__input Mihin aikaan Teidät tavoittaa parhaiten?
+						input.full--width(type="date" id="time" name="LEADCF91")
+					input.order.callback__order(type="submit" value="Отправить")
+		.hang(style="display:none")
+			img.hang__img(src="https://lh6.ggpht.com/5puZavg4x2pThSTJgos1sARWoARea7tzr_B8AWEwn2lV05RoXo9M8BM2XwcvwG6nIGc=w300", alt="")
+			p.hang__text В Hangouts можно общаться как в обычной жизни. Добавляйте в чат фотографии и смайлики и проводите групповые видеовстречи. Это бесплатно!
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.min.js")
+		script(src="js/tingle.js")
+		script(src="js/gumshoe.min.js")
+		script(src="js/jquery.periodpicker.full.min.js")
+		script(src="js/main.js")
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVNcLZ6vMI8kKkJMRdU1sahNJKPs3RrPY&callback=initMap"
+		async defer)
