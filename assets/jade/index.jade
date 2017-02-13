@@ -2,6 +2,7 @@ doctype html
 html(lang="ru")
 	head
 		meta(charset="UTF-8")
+		meta(content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport")
 		title Лечение и имплантация зубов в Финляндии и Эстонии с русскоязычными докторами и европейскими гарантиями
 		link(rel='apple-touch-icon', sizes='60x60', href='favicons/apple-touch-icon.png')
 		link(rel='icon', type='image/png', href='favicons/favicon-32x32.png', sizes='32x32')
@@ -18,339 +19,539 @@ html(lang="ru")
 		link(rel="stylesheet", href="css/styles.css")
 		link(rel="stylesheet", href="css/font.css")
 	body
-		nav.menu(data-gumshoe-header)
+		#menu.slideout-menu
 			.container
-				.row.middle-xs.center-xs
-					.col-xs-10
-						ul.menu__list.flex(data-gumshoe)
-							li.menu__list__item.active
-								a.active(href="#services") Наши услуги
-							li.menu__list__item 
-								a(href="#callback") Записаться на консультацию
-							li.menu__list__item 
-								a(href="#review") Отзывы
-							li.menu__list__item 
-								a(href="#") Почему выбирают нас
-							li.menu__list__item 
-								a(href="#") О нас
-							li.menu__list__item 
-								a(href="#") Сертификаты
-							li.menu__list__item 
-								a(href="#") Контакты
-		header.header
-			.container
-				.row.middle-xs
-					.col-xs-3
+				.row
+					.col-md-12.col-sm-12.col-xs-12
 						.header__logo
-							img(src="img/logo.png", alt="Логотип")
-					.col-xs-3
-						.header__description
-							p Сеть стоматологических клиник<br> в Финляндии и Эстонии
-					.col-xs-6.end-xs
-						.header__callback
-							p.header__callback__phone  <i class="icon-call-answer"></i>0207205808
-							a(onclick="modalCallBack.open()").order.call Заказать звонок
-		section.offer
-			.container
-				.row.middle-xs
-					.col-xs-8
-						h1.offer__heading Лечение и имплантация зубов в Финляндии и Эстонии с русскоязычными докторами и европейскими гарантиями
-						ul.offer__list
-							li.offer__list__item — Уникальная система лечения без боли и стресса
-							li.offer__list__item — Стоматологии в Финляндии и Эстонии
-							li.offer__list__item — Низкие цены
-						a.order.offer__order.cons(onclick="modalCallBack.open()") Заказать консультацию
-					.col-xs-4
-		section.services#services
-			.container
-				.row.center-xs
-					.col-xs-12
-						h2.heading Наши услуги
-				.row
-					.col-xs-3
-						ul.services__list
-							li(data-image="img/services-teeth.png" data-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores nihil, nesciunt labore velit! Optio fuga aperiam, a ratione officiis repellat odit culpa excepturi voluptas, animi dolores in minima cum alias.")
-								span Керамические коронки и мосты
-							hr
-							li(data-image="img/services-teeth.png" data-text="Lorem2 ipsum dolor sit amet, consectetur adipisicing elit. Maiores nihil, nesciunt labore velit! Optio fuga aperiam, a ratione officiis repellat odit culpa excepturi voluptas, animi dolores in minima cum alias.")
-								span Компьютерная аксиальная томография
-							hr
-							li(data-image="img/services-teeth.png" data-text="Lorem3 ipsum dolor sit amet, consectetur adipisicing elit. Maiores nihil, nesciunt labore velit! Optio fuga aperiam, a ratione officiis repellat odit culpa excepturi voluptas, animi dolores in minima cum alias.")
-								span Пародонтальная хирургия
-					.col-xs-6.center-xs
-						img(src="img/services-teeth.png", alt="")
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores nihil, nesciunt labore velit! Optio fuga aperiam, a ratione officiis repellat odit culpa excepturi voluptas, animi dolores in minima cum alias.
-					.col-xs-3
-						ul.services__list
-							li(data-image="img/services-teeth.png" data-text="Lorem4 ipsum dolor sit amet, consectetur adipisicing elit. Maiores nihil, nesciunt labore velit! Optio fuga aperiam, a ratione officiis repellat odit culpa excepturi voluptas, animi dolores in minima cum alias.")
-								span Имплантологии
-							hr
-							li(data-image="img/services-teeth.png" data-text="Lorem5 ipsum dolor sit amet, consectetur adipisicing elit. Maiores nihil, nesciunt labore velit! Optio fuga aperiam, a ratione officiis repellat odit culpa excepturi voluptas, animi dolores in minima cum alias.")
-								span Искусственном замещении кости
-							hr
-							li(data-image="img/services-teeth.png" data-text="Lorem6 ipsum dolor sit amet, consectetur adipisicing elit. Maiores nihil, nesciunt labore velit! Optio fuga aperiam, a ratione officiis repellat odit culpa excepturi voluptas, animi dolores in minima cum alias.")
-								span Синус-лифтинг
-		section.guarantee#guarantee
-			.container
-				.row.middle-xs
-					.col-xs-offset-1
-					.col-xs-6
-						h2.heading Наши гарантии
-						p.guarantee__text Implanttihoito - оплатит все затраты на стоматологическую и лабораторную работу, необходимую для корректировки возникших проблем. В случае мелких исправлений вы можете обратиться к местному стоматологу в вашей стране и выслать счет Implanttihoito с целью оплаты.
-						p.guarantee__text Наша клиника выделяет максимум 50,00 евро на такие исправления, как повторное цементирование коронок или подгонка частичных и полных протезов.
-		section.callback#callback
-			.container
-				.row.center-xs.middle-xs
-					.col-xs-8
-						.callback__block
-							.row.middle-xs
-								.col-xs-7.start-md
-									h2.heading Приходите на первую бесплатную консультацию 
-									p.callback__block__text Заполните форму заявки, и наш специалист свяжется с вами в ближайшее время, чтобы записать на удобное время
-									a.order.callback__order.cons(onclick="modalCallBack.open()") Оставить заявку
-		section.free-consultation
-			.container
-				.row.center-xs
-					.col-xs-7
-						h2.heading.heading__big Бесплатная Online консультация
-						p.free-consultation__text У на сесть возможность проводить онлайн консультацию, поэтому нужно этот блок тоже сделать, суть простая, доктор может через сервис ответить на вопросы и рассказать как строится лечение.
-				.row.center-xs
-					.col-xs-4
-						figure.free-consultation__block
-							i.icon-notebook.free-consultation__block__image
-							p.free-consultation__block__text Оставляете заявку
-					.col-xs-4
-						figure.free-consultation__block
-							i.icon-clock.free-consultation__block__image
-							p.free-consultation__block__text Назначается время
-					.col-xs-4
-						figure.free-consultation__block.none
-							i.icon-man.free-consultation__block__image
-							p.free-consultation__block__text Подключаетесь через компьютер или телефон к сервису 
-								a(onclick="hang.open();") hangouts.google.com
-		section.callback-2
-			.container
-				.row.center-xs.middle-xs
-					.col-xs-9
-						.callback-2__block
-							.row.no-margin
-								.col-xs-6.no-margin
-									.swiper-container
-										.swiper-wrapper
-											.swiper-slide(style="background: url('img/slider.png')")
-											.swiper-slide(style="background: url('img/slider.png')")
-											.swiper-slide(style="background: url('img/slider.png')")
-											.swiper-slide(style="background: url('img/slider.png')")
-										// Add Pagination
-										.swiper-pagination
-									.callback-2__block__text--block.flex
-										p У на сесть возможность проводить онлайн консультацию, поэтому нужно этот блок тоже сделать, суть простая, доктор может через сервис ответить на вопросы и рассказать как строится лечение.
-								.col-xs-6.no-margin
-									form(action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads2095140000000141078 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory()' accept-charset='UTF-8').form
-										script.
-											var mndFileds=new Array('Last Name');
-											var fldLangVal=new Array('Фамилия');
-											var name='';
-											var email='';
-										// Do not remove this code.
-										// Do not remove this code.
-										input(type='text', style='display:none;', name='xnQsjsdp', value='b736e124c72f5718ba68e275ec5ccc77efe6e22b7f7f2a2af638ff35f8bd3582')
-										input(type='hidden', name='zc_gad', value='')
-										input(type='text', style='display:none;', name='xmIwtLD', value='3b01bdb55a45a7b0bfc639d6a7eb599c81c6831cb059d9c47fe118b076821f8f')
-										input(type='text', style='display:none;', name='actionType', value='TGVhZHM=')
-										input(type='text', style='display:none;', name='returnURL', value='http://implanttihoito.fi/ru')
-										// Do not remove this code.
-										// Do not remove this code.
-										h2.heading.heading__form Оставьте заявку<br> на обратный звонок
-										p.form__text Оставтье заявку и мы перезвоним вам<br> в ближайшее время
-										input.dynamic_inputs(type="hidden" name="LEADCF14" data-utm="campaign" value="" max-length="250" placeholder="Кампания")
-										input.dynamic_inputs(type="hidden" name="LEADCF16" data-utm="term"     value="" max-length="250" placeholder="Ключевой запрос")
-										input.dynamic_inputs(type="hidden" name="LEADCF11" data-utm="source" max-length="250" placeholder="Рекламный канал")
-										input(type="hidden" name="LEADCF12" max-length="250" placeholder="Целевое действие" class="goal")
-										input(type="hidden" name="LEADCF15" value="<?php echo $query;?>"      max-length="250" placeholder="Поисковый запрос")
-										input(type="hidden" name="LEADCF13" value="<?php echo $actual_link?>" max-length="250" placeholder="Посадочная страница")
-										input(type="hidden" name="LEADCF17" value="<?php echo $referer;?>"    max-length="250" placeholder="Источник (реф.хвос)")
-										.flex.fd
-											input.form__name(type="text" name="Last Name" placeholder="Ваше имя")
-											input.form__phone(type="tel" name="Mobile" placeholder="Ваш телефон")
-											input.order.callback__order(type="submit" value="Отправить")
-		section.review
-			.container
-				.row
-					.col-xs-12.center-xs
-						h2.heading Отзывы наших клиентов
-				.line
-				.row.center-xs.review__block
-					.col-xs-2.start-xs
-						.review__block__image
-							img(src="img/review.png", alt="")
-					.col-xs-6.start-xs
-						p.review__block__heading Генрих Штанмайер
-						p.review__block__text Добрый день.Хотела бы сказать огромное спасибо всему персоналу клиники Дент Мастер за ВСЁ! Главное, за правильное отношение к своей работе. Особенное впечатление производит профессионализм, начиная от чистки зубов до протезирования. вся моя семья побывала здесь. деток ведут опытные стоматологи, проводятся своевременно проф.осмотры. Сама я очень благодарна Евгений Владимирович - вылечил все зубы внимательно и добросовестно. Ну и, конечно,замечательным хирургу и ортопеду у которых просто золотые руки Владимиру Анатольевичу и Валентину Витальевичу. Профессиональны, корректены, внимателены. Спасибо всем! Рекомендую всем знакомым без сомнения!
-				.row.center-xs.review__block
-					.col-xs-2.start-xs
-						.review__block__image
-							img(src="img/review.png", alt="")
-					.col-xs-6.start-xs
-						p.review__block__heading Генрих Штанмайер
-						p.review__block__text Добрый день.Хотела бы сказать огромное спасибо всему персоналу клиники Дент Мастер за ВСЁ! Главное, за правильное отношение к своей работе. Особенное впечатление производит профессионализм, начиная от чистки зубов до протезирования. вся моя семья побывала здесь. деток ведут опытные стоматологи, проводятся своевременно проф.осмотры. Сама я очень благодарна Евгений Владимирович - вылечил все зубы внимательно и добросовестно. Ну и, конечно,замечательным хирургу и ортопеду у которых просто золотые руки Владимиру Анатольевичу и Валентину Витальевичу. Профессиональны, корректены, внимателены. Спасибо всем! Рекомендую всем знакомым без сомнения!
-				.new__review
-					.item
-						.row.center-xs.review__block
-							.col-xs-2.start-xs
-								.review__block__image
-									img(src="img/review.png", alt="")
-							.col-xs-6.start-xs
-								p.review__block__heading Генрих Штанмайер
-								p.review__block__text Добрый день.Хотела бы сказать огромное спасибо всему персоналу клиники Дент Мастер за ВСЁ! Главное, за правильное отношение к своей работе. Особенное впечатление производит профессионализм, начиная от чистки зубов до протезирования. вся моя семья побывала здесь. деток ведут опытные стоматологи, проводятся своевременно проф.осмотры. Сама я очень благодарна Евгений Владимирович - вылечил все зубы внимательно и добросовестно. Ну и, конечно,замечательным хирургу и ортопеду у которых просто золотые руки Владимиру Анатольевичу и Валентину Витальевичу. Профессиональны, корректены, внимателены. Спасибо всем! Рекомендую всем знакомым без сомнения!
-				.row.center-xs
-					a.order.order-review Показать еще отзыв
-		section.about#review
-			.container
-				.row
-					.col-xs-12.center-xs
-						h2.heading О клинике
-					.col-xs-4
-						.row
-							.col-xs-2.col-number
-								p.about__number 01
-							.col-xs-1.col-line
-								.about__line
-							.col-xs-9.start-xs
-								p.about__text Implanttihoito - ведущая в Финляндии и Эстонии сеть стоматологических клиник в области имплантологии и эстетической стоматологии.
-					.col-xs-4
-						.row
-							.col-xs-2
-								p.about__number 02
-							.col-xs-1
-								.about__line
-							.col-xs-9.start-xs
-								p.about__text Клиника специализируется на имплантологии, искусственном замещении кости, синус-лифтинг, пародонтальная хирургия, компьютерная аксиальная томография (КТ-сканирование), а также керамические коронки и мосты.
-					.col-xs-4
-						.row
-							.col-xs-2
-								p.about__number 03
-							.col-xs-1
-								.about__line
-							.col-xs-9.start-xs
-								p.about__text Имеет отличную репутацию на международном уровне, особенно в сфере сложного эстетического лечения.
-					.col-xs-4
-						.row
-							.col-xs-2
-								p.about__number 04
-							.col-xs-1
-								.about__line
-							.col-xs-9.start-xs
-								p.about__text Являемся одним из пионеров без стрессовой стоматологии в Скандинавии и обеспечивает пациентам высокий уровень комфорта.
-					.col-xs-4
-						.row
-							.col-xs-2
-								p.about__number 05
-							.col-xs-1
-								.about__line
-							.col-xs-9.start-xs
-								p.about__text Высокопрофессиональные стоматологи, стоматологи-гигиенисты, медсестры и координаторы тесно сотрудничают вместе, тем самым обеспечивая высокое качество стоматологических услуг и комфорт для каждого пациента.
-		section.step
-			.container
-				.row.center-xs
-					.col-xs-12
-						h2.heading Этапы лечения
-					.col-xs-4.step__block.none
-						img(src="img/step-1.png", alt="")
-						p.step__heading Импланты
-						p.step__text Консультация
-						ul.step__list
-							li.step__list__item 
-								span Хирургия
-							li.step__list__item 
-								span Импланаталогия
-							li.step__list__item 
-								span Протетика
-					.col-xs-4.step__block
-						img(src="img/step-2.png", alt="")
-						p.step__heading Коронки
-						p.step__text Консультация
-						ul.step__list
-							li.step__list__item 
-								span 1-й этап (подготовка)
-							li.step__list__item 
-								span 2-й этап (цементировка)
-					.col-xs-4.step__block
-						img(src="img/step-3.png", alt="")
-						p.step__heading Общий наркоз
-						p.step__text Консультация
-						ul.step__list
-							li.step__list__item 
-								span 1-й этап (предоплата)
-							li.step__list__item 
-								span 2-й этап (лечение)
-		.flex
-			a(data-target="#map" data-shown-text="Скрыть карту" data-hidden-text="Развернуть карту").order.map__order#map__order Развернуть карту
-		#map
-		footer.footer
-			.container
-				.row.middle-xs
-					.col-xs-2.footer__block
-						p.footer__heading Helsinki
-						p.footer__text Puustellinrinne 3,<br>00410 Ma-Pe 08-16
-					.col-xs-2.footer__block
-						p.footer__heading Pori
-						p.footer__text Luodontie 6, <br>28330 Ma-Pe 8-16
-					.col-xs-2.footer__block
-						p.footer__heading Jyv<span>ä</span>skyl<span>ä</span
-						p.footer__text Hannikaisenkatu 11-13,<br>40100 Ma-Pe 8-16
-					.col-xs-2.footer__block
-						p.footer__heading Tampere
-						p.footer__text Tullikatu 6,<br>33100 Ma-To: 08-20,<br>Pe: 08-16
-					.col-xs-2.footer__block
-						p.footer__heading Tallinn
-						p.footer__text Kotkapoja 2A,<br>11315 Ma-To: 08-20,<br>Pe: 08-16
+							img(src='img/logo.jpg', alt='Логотип')
+					.col-md-12.col-sm-12.col-xs-12
+						nav
+							ul.menu__list
+								li.menu__list__item.active
+									a.active(href="#services") Что такое имплантант
+								li.menu__list__item 
+									a(href="#callback") Частые вопросы
+								li.menu__list__item 
+									a(href="#review") Услуги
+								li.menu__list__item 
+									a(href="#") Наши кейсы
+								li.menu__list__item 
+									a(href="#") Отзывы
+								li.menu__list__item 
+									a(href="#") Анастезия
+								li.menu__list__item 
+									a(href="#") Цены
+								li.menu__list__item 
+									a(href="#") О нас 
+		.fixed.header-hamburger
+			button.toggle-menu
+				.icon-burger
+		#panel(data-spy="scroll" data-target="#navbar-example2" class="scrollspy-example")
+			nav.menu.hidden-sm
+				.container
+					.row.middle-md.middle-sm.middle-xs.center-md.center-sm.center-xs
+						.col-md-10
+							ul.menu__list.flex#navbar-example2
+								li.menu__list__item.active
+									a.active(href="#what") Что такое имплантант
+								li.menu__list__item 
+									a(href="#faq") Частые вопросы
+								li.menu__list__item 
+									a(href="#review") Услуги
+								li.menu__list__item 
+									a(href="#") Наши кейсы
+								li.menu__list__item 
+									a(href="#") Отзывы
+								li.menu__list__item 
+									a(href="#") Анастезия
+								li.menu__list__item 
+									a(href="#") Цены
+								li.menu__list__item 
+									a(href="#") О нас 
+			header.header
+				.container
+					.row.middle-md.middle-sm.middle-xs.center-xs
+						.col-md-3.col-sm-3.col-xs-12
+							.header__logo
+								img(src="img/logo.png", alt="Логотип")
+						.col-md-3.col-sm-3.col-xs-12
+							.header__description
+								p Сеть стоматологических клиник<br> в Финляндии и Эстонии
+						.col-md-6.col-sm-6.col-xs-12.end-md
+							.header__callback
+								p.header__callback__phone  <i class="icon-call-answer"></i>0207205808
+								a(onclick="modalCallBack.open()").order.call Заказать звонок
+			section.offer#services
+				.container
+					.row.middle-md
+						.col-md-8
+							h1.offer__heading Имплантирование специалистов<br> красивую улыбку вопросу.<br> Дентиум зубного имплантата только 999 ЕС
+							a.order.offer__order.cons(onclick="modalCallBack.open()") Записаться на прием
+						.col-md-4
+			section.what#what
+				.container
+					.row
+						.col-md-12.col-sm-12.col-xs-12.center-xs
+							h2.heading Что такое имплантант
+						.col-md-12
+							.what__article
+								.row
+									.col-md-3.col-sm-3.col-xs-12.center-xs
+										.what__image.center-md
+											img(src="", alt="")
+									.col-md-9.col-sm-9.col-xs-12
+										input#post-1.read-more-state(type='checkbox')
+										h3.what__heading Implanttifaktat
+										p.what__text.read-more-wrap Ensimmäisiä hampaita korvaavia toimenpiteitä on tehty jo tuhansia vuosia sitten. Varhaisimmat tiedossa olevat kokeilut hampaita korvaavista toimenpiteistä ajoittuvat vuoteen 600jKr.
+										label.what__more.read-more-trigger(for="post-1")
+							.what__article
+								.row
+									.col-md-3.col-sm-3.col-xs-12.center-xs
+										.what__image.center-md
+											img(src="", alt="")
+									.col-md-9.col-sm-9.col-xs-12
+										input#post-2.read-more-state(type='checkbox')
+										h3.what__heading Implanttifaktat
+										p.what__text.read-more-wrap Ensimmäisiä hampaita korvaavia toimenpiteitä on tehty jo tuhansia vuosia sitten. Varhaisimmat tiedossa olevat kokeilut hampaita korvaavista toimenpiteistä ajoittuvat vuoteen 600jKr.
+										label.what__more.read-more-trigger(for="post-2")
+							.what__article
+								.row
+									.col-md-3.col-sm-3.col-xs-12.center-xs
+										.what__image.center-md
+											img(src="", alt="")
+									.col-md-9.col-sm-9.col-xs-12
+										input#post-3.read-more-state(type='checkbox')
+										h3.what__heading Implanttifaktat
+										p.what__text.read-more-wrap Ensimmäisiä hampaita korvaavia toimenpiteitä on tehty jo tuhansia vuosia sitten. Varhaisimmat tiedossa olevat kokeilut hampaita korvaavista toimenpiteistä ajoittuvat vuoteen 600jKr.
+										label.what__more.read-more-trigger(for="post-3")
+							.what__article
+								.row
+									.col-md-3.col-sm-3.col-xs-12.center-xs
+										.what__image.center-md
+											img(src="", alt="")
+									.col-md-9.col-sm-9.col-xs-12
+										input#post-4.read-more-state(type='checkbox')
+										h3.what__heading Implanttifaktat
+										p.what__text.read-more-wrap Ensimmäisiä hampaita korvaavia toimenpiteitä on tehty jo tuhansia vuosia sitten. Varhaisimmat tiedossa olevat kokeilut hampaita korvaavista toimenpiteistä ajoittuvat vuoteen 600jKr.
+											span.read-more-target Aikaisemmin ajateltiin, että vain erikoishammaslääkäri saisi suorittaa implantoinnin. Käsitykset ovat muuttuneet paljon ja nykyään hammasimplantin voi asentaa sellainen hammashoidon ammattilainen, joka on saanut riittävän koulutuksen ja perehdytyksen implantointiin
+										label.what__more.read-more-trigger(for="post-4")
+						.col-md-12.col-sm-12.col-xs-12.center-xs
+							a.order.callback__order.cons(onclick="modalCallBack.open()") Задать свой вопрос
+			section.faq#faq
+				.container
+					.row.center-xs
+						.col-md-12.col-sm-12.col-xs-12.center-xs
+							h2.heading Частые вопросы UKK
+						.col-md-8.col-sm-8.col-xs-10
+							.faq__block
+								input#faq1.read-more-state(type='checkbox')
+								label.read-more-trigger.faq__block__heading(for="faq1").faq__text Mitä hintaan sisältyy?
+								.read-more-wrap
+									p.read-more-target.faq__block__text Aikaisemmin ajateltiin, että vain erikoishammaslääkäri saisi suorittaa implantoinnin. Käsitykset ovat muuttuneet paljon ja nykyään hammasimplantin voi asentaa sellainen hammashoidon ammattilainen, joka on saanut riittävän koulutuksen ja perehdytyksen implantointiin
+							.faq__block
+								input#faq1.read-more-state(type='checkbox')
+								label.read-more-trigger.faq__block__heading(for="faq1").faq__text Minulta puuttuu useita hampaita, korvataanko jokainen erillisellä implantilla?
+								.read-more-wrap
+									p.read-more-target.faq__block__text Aikaisemmin ajateltiin, että vain erikoishammaslääkäri saisi suorittaa implantoinnin. Käsitykset ovat muuttuneet paljon ja nykyään hammasimplantin voi asentaa sellainen hammashoidon ammattilainen, joka on saanut riittävän koulutuksen ja perehdytyksen implantointiin
+							.faq__block
+								input#faq1.read-more-state(type='checkbox')
+								label.read-more-trigger.faq__block__heading(for="faq1").faq__text Kuinka monta prosenttia implantoinneista onnistuu?
+								.read-more-wrap
+									p.read-more-target.faq__block__text Aikaisemmin ajateltiin, että vain erikoishammaslääkäri saisi suorittaa implantoinnin. Käsitykset ovat muuttuneet paljon ja nykyään hammasimplantin voi asentaa sellainen hammashoidon ammattilainen, joka on saanut riittävän koulutuksen ja perehdytyksen implantointiin
+							.faq__block
+								input#faq1.read-more-state(type='checkbox')
+								label.read-more-trigger.faq__block__heading(for="faq1").faq__text Kuinka kauan hoito kestää?
+								.read-more-wrap
+									p.read-more-target.faq__block__text Eivätkö hammasimplantit tule hyvin kalliiksi?
+							.faq__block
+								input#faq1.read-more-state(type='checkbox')
+								label.read-more-trigger.faq__block__heading(for="faq1").faq__text Mitä hintaan sisältyy?
+								.read-more-wrap
+									p.read-more-target.faq__block__text Aikaisemmin ajateltiin, että vain erikoishammaslääkäri saisi suorittaa implantoinnin. Käsitykset ovat muuttuneet paljon ja nykyään hammasimplantin voi asentaa sellainen hammashoidon ammattilainen, joka on saanut riittävän koulutuksen ja perehdytyksen implantointiin
+							.faq__block
+								input#faq1.read-more-state(type='checkbox')
+								label.read-more-trigger.faq__block__heading(for="faq1").faq__text Voiko vanhana ottaa hammasimplantin?
+								.read-more-wrap
+									p.read-more-target.faq__block__text Aikaisemmin ajateltiin, että vain erikoishammaslääkäri saisi suorittaa implantoinnin. Käsitykset ovat muuttuneet paljon ja nykyään hammasimplantin voi asentaa sellainen hammashoidon ammattilainen, joka on saanut riittävän koulutuksen ja perehdytyksen implantointiin
+							.faq__block
+								input#faq1.read-more-state(type='checkbox')
+								label.read-more-trigger.faq__block__heading(for="faq1").faq__text Onko implanteissa vaarallisia metalleja?
+								.read-more-wrap
+									p.read-more-target.faq__block__text Aikaisemmin ajateltiin, että vain erikoishammaslääkäri saisi suorittaa implantoinnin. Käsitykset ovat muuttuneet paljon ja nykyään hammasimplantin voi asentaa sellainen hammashoidon ammattilainen, joka on saanut riittävän koulutuksen ja perehdytyksen implantointiin
+							.faq__block
+								input#faq1.read-more-state(type='checkbox')
+								label.read-more-trigger.faq__block__heading(for="faq1").faq__text Minkälaisia oireita hoidon jälkeen voi ilmestyä?
+								.read-more-wrap
+									p.read-more-target.faq__block__text Aikaisemmin ajateltiin, että vain erikoishammaslääkäri saisi suorittaa implantoinnin. Käsitykset ovat muuttuneet paljon ja nykyään hammasimplantin voi asentaa sellainen hammashoidon ammattilainen, joka on saanut riittävän koulutuksen ja perehdytyksen implantointiin
+							.faq__block
+								input#faq1.read-more-state(type='checkbox')
+								label.read-more-trigger.faq__block__heading(for="faq1").faq__text Minkä merkkisiä implantteja käytätte?
+								.read-more-wrap
+									p.read-more-target.faq__block__text Aikaisemmin ajateltiin, että vain erikoishammaslääkäri saisi suorittaa implantoinnin. Käsitykset ovat muuttuneet paljon ja nykyään hammasimplantin voi asentaa sellainen hammashoidon ammattilainen, joka on saanut riittävän koulutuksen ja perehdytyksen implantointiin
+						.col-md-12.col-sm-12.col-xs-12.center-xs
+							a.order.callback__order.cons(onclick="modalCallBack.open()") Задать свой вопрос
+			section.services
+				.container
+					.row.center-md
+						.col-md-12.col-sm-12.col-xs-12.center-xs
+							h2.heading Дополнительные услуги
+						.col-md-8.col-sm-12.col-xs-12
+							.row
+								.col-md-6.col-sm-6.col-xs-12.center-xs
+									figure
+										.icon-lips.services__icon
+										h3.services__heading Huomioonotettavia asioita
+										p.services__text Viehättävä hymy syntyy siitä, kun hampaat ovat hieman eripituisia. Kun hampaat puhkeavat ensimmäisen kerran, keskellä olevat etuhampaat ovat selkeästi muita pidemmät ja ajan myötä ero tasaantuu...
+								.col-md-6.col-sm-6.col-xs-12.center-xs
+									figure
+										.icon-lips.services__icon
+										h3.services__heading Huomioonotettavia asioita
+										p.services__text Viehättävä hymy syntyy siitä, kun hampaat ovat hieman eripituisia. Kun hampaat puhkeavat ensimmäisen kerran, keskellä olevat etuhampaat ovat selkeästi muita pidemmät ja ajan myötä ero tasaantuu...
+								.col-md-6.col-sm-6.col-xs-12.center-xs
+									figure
+										.icon-teeth-star.services__icon
+										h3.services__heading Laminaatin eli posliinikuoren rakenne
+										p.services__text Viehättävä hymy syntyy siitä, kun hampaat ovat hieman eripituisia. Kun hampaat puhkeavat ensimmäisen kerran, keskellä olevat etuhampaat ovat selkeästi muita pidemmät ja ajan myötä ero tasaantuu...
+								.col-md-6.col-sm-6.col-xs-12.center-xs
+									figure
+										.icon-teeth-question.services__icon
+											span.path1
+											span.path2
+											span.path3
+											span.path4
+											span.path5
+										h3.services__heading Miksi valita laminaatit?
+										p.services__text Viehättävä hymy syntyy siitä, kun hampaat ovat hieman eripituisia. Kun hampaat puhkeavat ensimmäisen kerran, keskellä olevat etuhampaat ovat selkeästi muita pidemmät ja ajan myötä ero tasaantuu...
 
-		.call--back--modal(style="display:none")
-			.row.center-xs
-				form(action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads2095140000000141078 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory()' accept-charset='UTF-8').form
-					script.
-						var mndFileds=new Array('Last Name');
-						var fldLangVal=new Array('Фамилия');
-						var name='';
-						var email='';
-					// Do not remove this code.
-					// Do not remove this code.
-					input(type='text', style='display:none;', name='xnQsjsdp', value='b736e124c72f5718ba68e275ec5ccc77efe6e22b7f7f2a2af638ff35f8bd3582')
-					input(type='hidden', name='zc_gad', value='')
-					input(type='text', style='display:none;', name='xmIwtLD', value='3b01bdb55a45a7b0bfc639d6a7eb599c81c6831cb059d9c47fe118b076821f8f')
-					input(type='text', style='display:none;', name='actionType', value='TGVhZHM=')
-					input(type='text', style='display:none;', name='returnURL', value='http://implanttihoito.fi/ru')
-					// Do not remove this code.
-					// Do not remove this code.
-					input#hours(name='LEADCF91hour', required='true', style='display: none;', type='text')
-					input#minutes(name='LEADCF91minute', required='true', style='display: none;', type='text')
-					input#hours12(name='LEADCF91ampm', required='true', style='display: none;', type='text')
-					input#date(name='LEADCF91', required='true', style='display: none;', type='text')
-					h2.heading.heading__form Оставьте заявку<br> на обратный звонок
-					p.form__text Оставтье заявку и мы перезвоним вам<br> в ближайшее время
-					input(type="text" name="Last Name" placeholder="Фамилия" maxlength="80" required)
-					input(type="text" name="Mobile" placeholder="Моб. телефон" maxlength="30")
-					input(type="text" name="Email" placeholder="Эл. почта")
-					input.dynamic_inputs(type="hidden" name="LEADCF14" data-utm="campaign" value="" max-length="250" placeholder="Кампания")
-					input.dynamic_inputs(type="hidden" name="LEADCF16" data-utm="term"     value="" max-length="250" placeholder="Ключевой запрос")
-					input.dynamic_inputs(type="hidden" name="LEADCF11" data-utm="source" max-length="250" placeholder="Рекламный канал")
-					input(type="hidden" name="LEADCF12" max-length="250" placeholder="Целевое действие" class="goal")
-					input(type="hidden" name="LEADCF15" value="<?php echo $query;?>"      max-length="250" placeholder="Поисковый запрос")
-					input(type="hidden" name="LEADCF13" value="<?php echo $actual_link?>" max-length="250" placeholder="Посадочная страница")
-					input(type="hidden" name="LEADCF17" value="<?php echo $referer;?>"    max-length="250" placeholder="Источник (реф.хвос)")
-					div.form__block.full--width
-						p.form__text__input Mihin aikaan Teidät tavoittaa parhaiten?
-						input.full--width(type="date" id="time" name="LEADCF91")
-					input.order.callback__order(type="submit" value="Отправить")
-		.hang(style="display:none")
-			img.hang__img(src="https://lh6.ggpht.com/5puZavg4x2pThSTJgos1sARWoARea7tzr_B8AWEwn2lV05RoXo9M8BM2XwcvwG6nIGc=w300", alt="")
-			p.hang__text В Hangouts можно общаться как в обычной жизни. Добавляйте в чат фотографии и смайлики и проводите групповые видеовстречи. Это бесплатно!
-		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js")
-		script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.min.js")
-		script(src="js/tingle.js")
-		script(src="js/gumshoe.min.js")
-		script(src="js/jquery.periodpicker.full.min.js")
-		script(src="js/main.js")
-		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVNcLZ6vMI8kKkJMRdU1sahNJKPs3RrPY&callback=initMap"
-		async defer)
+			section.callback#callback
+				.container
+					.row.center-md.middle-md.center-sm.middle-sm.center-xs.middle-xs
+						.col-md-8
+							.callback__block
+								.row.middle-md
+									.col-md-7.center-md
+										form(action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads2095140000001131029 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory()' accept-charset='UTF-8').form
+											script.
+												var mndFileds=new Array('Last Name');
+												var fldLangVal=new Array('Фамилия');
+												var name='';
+												var email='';
+											// Do not remove this code.
+											// Do not remove this code.
+											input(type='text', style='display:none;', name='xnQsjsdp', value='b736e124c72f5718ba68e275ec5ccc77efe6e22b7f7f2a2af638ff35f8bd3582')
+											input(type='hidden', name='zc_gad', value='')
+											input(type='text', style='display:none;', name='xmIwtLD', value='3b01bdb55a45a7b0bfc639d6a7eb599cfa77a832ea2632e3d1b531ba87ddee0d')
+											input(type='text', style='display:none;', name='actionType', value='TGVhZHM=')
+											input(type='text', style='display:none;', name='returnURL', value='http://implanttihoito.fi/fi')
+											// Do not remove this code.
+											// Do not remove this code.
+											h2.heading.heading__form Оставьте заявку
+											p.form__text Оставтье заявку и мы перезвоним вам<br> в ближайшее время
+											input.dynamic_inputs(type="hidden" name="LEADCF14" data-utm="campaign" value="" max-length="250" placeholder="Кампания")
+											input.dynamic_inputs(type="hidden" name="LEADCF16" data-utm="term"     value="" max-length="250" placeholder="Ключевой запрос")
+											input.dynamic_inputs(type="hidden" name="LEADCF11" data-utm="source" max-length="250" placeholder="Рекламный канал")
+											input(type="hidden" name="LEADCF12" max-length="250" placeholder="Целевое действие" class="goal")
+											input(type="hidden" name="LEADCF15" value="<?php echo $query;?>"      max-length="250" placeholder="Поисковый запрос")
+											input(type="hidden" name="LEADCF13" value="<?php echo $actual_link?>" max-length="250" placeholder="Посадочная страница")
+											input(type="hidden" name="LEADCF17" value="<?php echo $referer;?>"    max-length="250" placeholder="Источник (реф.хвос)")
+											.flex.fd
+												input.form__name(type="text" name="Last Name" placeholder="Ваше имя")
+												input.form__phone(type="tel" name="Mobile" placeholder="Ваш телефон")
+												input.order.callback__order(type="submit" value="Отправить")
+			section.case
+				.container
+					.row
+						.col-md-12.col-sm-12.col-xs-12.center-xs
+							h2.heading Наши кейсы
+						.col-md-6.col-sm-6.col-xs-12
+							.case__block
+								.row.case__block__image
+									.col-md-6.col-sm-12.col-xs-12.center-xs.case__block__col.end-md
+										img.case__block__image__before(src="img/do1.png", alt="")
+										p.case__block__before--after До лечения
+									.col-md-6.col-sm-12.col-xs-12.center-xs.case__block__col
+										img.case__block__image__after(src="img/posle1.png", alt="")
+										p.case__block__before--after После лечения
+								h3.case__block__heading Impanttityö esimerkki 1
+								p.case__block__text Potilaalta on poistettu toinen kulmahammas noin puoli vuotta sitten. Potilaalle laitettiin implantti ja 4kk implanttiruuvin asentamisen jälkeen päälle asennettiin keraaminen kruunu. Tämän työn kustannus potilaalle oli 1500€ ja hoidon kesto 4kk.
+						.col-md-6.col-sm-6.col-xs-12
+							.case__block
+								.row.case__block__image
+									.col-md-6.col-sm-12.col-xs-12.center-xs.case__block__col.end-md
+										img.case__block__image__before(src="img/do1.png", alt="")
+										p.case__block__before--after До лечения
+									.col-md-6.col-sm-12.col-xs-12.center-xs.case__block__col
+										img.case__block__image__after(src="img/posle1.png", alt="")
+										p.case__block__before--after После лечения
+								h3.case__block__heading Impanttityö esimerkki 1
+								p.case__block__text Potilaalta on poistettu toinen kulmahammas noin puoli vuotta sitten. Potilaalle laitettiin implantti ja 4kk implanttiruuvin asentamisen jälkeen päälle asennettiin keraaminen kruunu. Tämän työn kustannus potilaalle oli 1500€ ja hoidon kesto 4kk.
+						.col-md-6.col-sm-6.col-xs-12
+							.case__block
+								.row.case__block__image
+									.col-md-6.col-sm-12.col-xs-12.center-xs.case__block__col.end-md
+										img.case__block__image__before(src="img/do1.png", alt="")
+										p.case__block__before--after До лечения
+									.col-md-6.col-sm-12.col-xs-12.center-xs.case__block__col
+										img.case__block__image__after(src="img/posle1.png", alt="")
+										p.case__block__before--after После лечения
+								h3.case__block__heading Impanttityö esimerkki 1
+								p.case__block__text Potilaalta on poistettu toinen kulmahammas noin puoli vuotta sitten. Potilaalle laitettiin implantti ja 4kk implanttiruuvin asentamisen jälkeen päälle asennettiin keraaminen kruunu. Tämän työn kustannus potilaalle oli 1500€ ja hoidon kesto 4kk.
+						.col-md-6.col-sm-6.col-xs-12
+							.case__block
+								.row.case__block__image
+									.col-md-6.col-sm-12.col-xs-12.center-xs.case__block__col.end-md
+										img.case__block__image__before(src="img/do1.png", alt="")
+										p.case__block__before--after До лечения
+									.col-md-6.col-sm-12.col-xs-12.center-xs.case__block__col
+										img.case__block__image__after(src="img/posle1.png", alt="")
+										p.case__block__before--after После лечения
+								h3.case__block__heading Impanttityö esimerkki 1
+								p.case__block__text Potilaalta on poistettu toinen kulmahammas noin puoli vuotta sitten. Potilaalle laitettiin implantti ja 4kk implanttiruuvin asentamisen jälkeen päälle asennettiin keraaminen kruunu. Tämän työn kustannus potilaalle oli 1500€ ja hoidon kesto 4kk.
+						.new__case
+							.item
+								.row
+									.col-md-6.col-sm-6.col-xs-12
+										.case__block
+											.row.case__block__image
+												.col-md-6.col-sm-12.col-xs-12.center-xs.case__block__col.end-md
+													img.case__block__image__before(src="img/do1.png", alt="")
+													p.case__block__before--after До лечения
+												.col-md-6.col-sm-12.col-xs-12.center-xs.case__block__col
+													img.case__block__image__after(src="img/posle1.png", alt="")
+													p.case__block__before--after После лечения
+											h3.case__block__heading Impanttityö esimerkki 1
+											p.case__block__text Potilaalta on poistettu toinen kulmahammas noin puoli vuotta sitten. Potilaalle laitettiin implantti ja 4kk implanttiruuvin asentamisen jälkeen päälle asennettiin keraaminen kruunu. Tämän työn kustannus potilaalle oli 1500€ ja hoidon kesto 4kk.
+									.col-md-6.col-sm-6.col-xs-12
+										.case__block
+											.row.case__block__image
+												.col-md-6.col-sm-12.col-xs-12.center-xs.case__block__col.end-md
+													img.case__block__image__before(src="img/do1.png", alt="")
+													p.case__block__before--after До лечения
+												.col-md-6.col-sm-12.col-xs-12.center-xs.case__block__col
+													img.case__block__image__after(src="img/posle1.png", alt="")
+													p.case__block__before--after После лечения
+											h3.case__block__heading Impanttityö esimerkki 1
+											p.case__block__text Potilaalta on poistettu toinen kulmahammas noin puoli vuotta sitten. Potilaalle laitettiin implantti ja 4kk implanttiruuvin asentamisen jälkeen päälle asennettiin keraaminen kruunu. Tämän työn kustannus potilaalle oli 1500€ ja hoidon kesto 4kk.
+							.item
+								.row
+									.col-md-6.col-sm-6.col-xs-12
+										.case__block
+											.row.case__block__image
+												.col-md-6.col-sm-12.col-xs-12.center-xs.case__block__col.end-md
+													img.case__block__image__before(src="img/do1.png", alt="")
+													p.case__block__before--after До лечения
+												.col-md-6.col-sm-12.col-xs-12.center-xs.case__block__col
+													img.case__block__image__after(src="img/posle1.png", alt="")
+													p.case__block__before--after После лечения
+											h3.case__block__heading Impanttityö esimerkki 1
+											p.case__block__text Potilaalta on poistettu toinen kulmahammas noin puoli vuotta sitten. Potilaalle laitettiin implantti ja 4kk implanttiruuvin asentamisen jälkeen päälle asennettiin keraaminen kruunu. Tämän työn kustannus potilaalle oli 1500€ ja hoidon kesto 4kk.
+									.col-md-6.col-sm-6.col-xs-12
+										.case__block
+											.row.case__block__image
+												.col-md-6.col-sm-12.col-xs-12.center-xs.case__block__col.end-md
+													img.case__block__image__before(src="img/do1.png", alt="")
+													p.case__block__before--after До лечения
+												.col-md-6.col-sm-12.col-xs-12.center-xs.case__block__col
+													img.case__block__image__after(src="img/posle1.png", alt="")
+													p.case__block__before--after После лечения
+											h3.case__block__heading Impanttityö esimerkki 1
+											p.case__block__text Potilaalta on poistettu toinen kulmahammas noin puoli vuotta sitten. Potilaalle laitettiin implantti ja 4kk implanttiruuvin asentamisen jälkeen päälle asennettiin keraaminen kruunu. Tämän työn kustannus potilaalle oli 1500€ ja hoidon kesto 4kk.
+						.col-md-12.center-md
+							a.order.callback__order.cons.order__case Смотреть еще
+			section.review
+				.container
+					.row
+						.col-md-12.center-md
+							h2.heading Отзывы наших клиентов
+					.line
+					.row.center-md.review__block
+						.col-md-2.start-md
+							.review__block__image
+								img(src="img/review.png", alt="")
+						.col-md-6.start-md
+							p.review__block__heading Генрих Штанмайер
+							p.review__block__text Добрый день.Хотела бы сказать огромное спасибо всему персоналу клиники Дент Мастер за ВСЁ! Главное, за правильное отношение к своей работе. Особенное впечатление производит профессионализм, начиная от чистки зубов до протезирования. вся моя семья побывала здесь. деток ведут опытные стоматологи, проводятся своевременно проф.осмотры. Сама я очень благодарна Евгений Владимирович - вылечил все зубы внимательно и добросовестно. Ну и, конечно,замечательным хирургу и ортопеду у которых просто золотые руки Владимиру Анатольевичу и Валентину Витальевичу. Профессиональны, корректены, внимателены. Спасибо всем! Рекомендую всем знакомым без сомнения!
+					.row.center-md.review__block
+						.col-md-2.start-md
+							.review__block__image
+								img(src="img/review.png", alt="")
+						.col-md-6.start-md
+							p.review__block__heading Генрих Штанмайер
+							p.review__block__text Добрый день.Хотела бы сказать огромное спасибо всему персоналу клиники Дент Мастер за ВСЁ! Главное, за правильное отношение к своей работе. Особенное впечатление производит профессионализм, начиная от чистки зубов до протезирования. вся моя семья побывала здесь. деток ведут опытные стоматологи, проводятся своевременно проф.осмотры. Сама я очень благодарна Евгений Владимирович - вылечил все зубы внимательно и добросовестно. Ну и, конечно,замечательным хирургу и ортопеду у которых просто золотые руки Владимиру Анатольевичу и Валентину Витальевичу. Профессиональны, корректены, внимателены. Спасибо всем! Рекомендую всем знакомым без сомнения!
+					.new__review
+						.item
+							.row.center-md.review__block
+								.col-md-2.start-md
+									.review__block__image
+										img(src="img/review.png", alt="")
+								.col-md-6.start-md
+									p.review__block__heading Генрих Штанмайер
+									p.review__block__text Добрый день.Хотела бы сказать огромное спасибо всему персоналу клиники Дент Мастер за ВСЁ! Главное, за правильное отношение к своей работе. Особенное впечатление производит профессионализм, начиная от чистки зубов до протезирования. вся моя семья побывала здесь. деток ведут опытные стоматологи, проводятся своевременно проф.осмотры. Сама я очень благодарна Евгений Владимирович - вылечил все зубы внимательно и добросовестно. Ну и, конечно,замечательным хирургу и ортопеду у которых просто золотые руки Владимиру Анатольевичу и Валентину Витальевичу. Профессиональны, корректены, внимателены. Спасибо всем! Рекомендую всем знакомым без сомнения!
+					.row.center-md
+						a.order.callback__order.cons.order-review Еще отзывы
+			section.anesthesia
+				.container
+					.row
+						.col-md-12.col-sm-12.col-xs-12.center-xs
+							h2.heading Анестезия
+						.col-md-1.col-sm-12.col-xs-12
+						.col-md-5.col-sm-12.col-xs-12.center-xs
+							img.anesthesia_image(src="img/anesthesia.png", alt="")
+						.col-md-5.col-sm-12.col-xs-12
+							p.anesthesia__text Miksi valita laminaatit?<br>Monia hampaisiin liittyviä esteettisiä ongelmia voidaan hoitaa laminaattien eli posliinikuorten avulla. Laminaatit ovat ohuita, posliinista valmistettuja levyjä, jotka kestävät kulumista ja... Miksi valita laminaatit? Monia hampaisiin liittyviä esteettisiä ongelmia voidaan hoitaa laminaattien eli posliinikuorten avulla. Laminaatit ovat ohuita, posliinista valmistettuja levyjä, jotka kestävät kulumista ja...
+						.col-md-1.col-sm-12.col-xs-12
+			section.price
+				.container
+					.row.center-md
+						.col-md-12.center-md
+							h2.heading Цены
+						.col-md-9(style="overflow-x: auto")
+							table.table
+								tr
+									th Название
+									th Цена
+									th Компенсация
+									th Франшиза
+								tr
+									td.green Мера иследования
+									td
+									td
+									td
+								tr
+									td Рот ограниченные исследования
+									td 32,00
+									td 32,00
+									td 32,00
+								tr
+									td Устные фундаментальных<br> исследований	
+									td 50,00
+									td 50,00
+									td 50,00
+								tr
+									td Вся челюсть рентгенограммы<br> (OPTG) комментарий
+									td 89,00
+									td 89,00
+									td 89,00
+								tr
+									td Стоматологические<br> рентгеновские лучи уходу за<br> визит (эскиз)
+									td 41,00
+									td 41,00
+									td 41,00
+								tr
+									td Зубоврачебный рентгеновский<br> снимок, укус крыло -описание<br> зубов района сайт
+									td 31,00
+									td 31,00
+									td 31,00
+								tr
+									td.green Пропаганда здоровья<br> полости рта
+									td
+									td
+									td
+								tr
+									td Пропаганда здоровья<br> полости рта
+									td 45,00
+									td 09,00
+									td 36,00
+								tr.new__tr
+									td.item Пропаганда здоровья<br> полости рта
+									td.item 45,00
+									td.item 09,00
+									td.item 36,00
+
+			.flex
+				a(data-target="#map" data-shown-text="Скрыть карту" data-hidden-text="Развернуть карту").price__order.order.callback__order.cons Смотреть еще
+			section.about-us
+				.container
+					.row.about-us__image.center-xs
+						.col-md-12.col-sm-12.col-xs-12.center-xs
+							h2.heading О нас (клиника)
+						.col-md-3.col-sm-4.col-xs-12
+							img(src="img/about-us/1.png", alt="")
+						.col-md-3.col-sm-4.col-xs-12
+							img(src="img/about-us/2.png", alt="")
+						.col-md-3.col-sm-4.col-xs-12
+							img(src="img/about-us/3.png", alt="")
+						.col-md-3.col-sm-4.col-xs-12
+							img(src="img/about-us/4.png", alt="")
+						.col-md-3.col-sm-4.col-xs-12
+							img(src="img/about-us/5.png", alt="")
+						.col-md-3.col-sm-4.col-xs-12
+							img(src="img/about-us/6.png", alt="")
+						.col-md-3.col-sm-4.col-xs-12
+							img(src="img/about-us/7.png", alt="")
+						.col-md-3.col-sm-4.col-xs-12
+							img(src="img/about-us/8.png", alt="")
+
+			.flex
+				a(data-target="#map" data-shown-text="Скрыть карту" data-hidden-text="Развернуть карту").order.map__order#map__order Развернуть карту
+			#map
+			footer.footer
+				.container
+					.row.middle-md
+						.col-md-2.footer__block
+							p.footer__heading Helsinki
+							p.footer__text Puustellinrinne 3,<br>00410 Ma-Pe 08-16
+						.col-md-2.footer__block
+							p.footer__heading Pori
+							p.footer__text Luodontie 6, <br>28330 Ma-Pe 8-16
+						.col-md-2.footer__block
+							p.footer__heading Jyv<span>ä</span>skyl<span>ä</span
+							p.footer__text Hannikaisenkatu 11-13,<br>40100 Ma-Pe 8-16
+						.col-md-2.footer__block
+							p.footer__heading Tampere
+							p.footer__text Tullikatu 6,<br>33100 Ma-To: 08-20,<br>Pe: 08-16
+						.col-md-2.footer__block
+							p.footer__heading Tallinn
+							p.footer__text Kotkapoja 2A,<br>11315 Ma-To: 08-20,<br>Pe: 08-16
+
+			.call--back--modal(style="display:none")
+				.row.center-md
+					form(action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads2095140000001131029 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory()' accept-charset='UTF-8').form
+						script.
+							var mndFileds=new Array('Last Name');
+							var fldLangVal=new Array('Фамилия');
+							var name='';
+							var email='';
+						// Do not remove this code.
+						// Do not remove this code.
+						input(type='text', style='display:none;', name='xnQsjsdp', value='b736e124c72f5718ba68e275ec5ccc77efe6e22b7f7f2a2af638ff35f8bd3582')
+						input#zc_gad(type='hidden', name='zc_gad', value='')
+						input(type='text', style='display:none;', name='xmIwtLD', value='3b01bdb55a45a7b0bfc639d6a7eb599cfa77a832ea2632e3d1b531ba87ddee0d')
+						input(type='text', style='display:none;', name='actionType', value='TGVhZHM=')
+						input(type='text', style='display:none;', name='returnURL', value='http://implanttihoito.fi/fi')
+						// Do not remove this code.
+						// Do not remove this code.
+						input#hours(name='LEADCF91hour', required='true', style='display: none;', type='text')
+						input#minutes(name='LEADCF91minute', required='true', style='display: none;', type='text')
+						input#hours12(name='LEADCF91ampm', required='true', style='display: none;', type='text')
+						input#date(name='LEADCF91', required='true', style='display: none;', type='text')
+						h2.heading.heading__form Оставьте заявку<br> на обратный звонок
+						p.form__text Оставтье заявку и мы перезвоним вам<br> в ближайшее время
+						input(type="text" name="Last Name" placeholder="Фамилия" maxlength="80" required)
+						input(type="text" name="Mobile" placeholder="Моб. телефон" maxlength="30")
+						input(type="text" name="Email" placeholder="Эл. почта")
+						input.dynamic_inputs(type="hidden" name="LEADCF14" data-utm="campaign" value="" max-length="250" placeholder="Кампания")
+						input.dynamic_inputs(type="hidden" name="LEADCF16" data-utm="term"     value="" max-length="250" placeholder="Ключевой запрос")
+						input.dynamic_inputs(type="hidden" name="LEADCF11" data-utm="source" max-length="250" placeholder="Рекламный канал")
+						input(type="hidden" name="LEADCF12" max-length="250" placeholder="Целевое действие" class="goal")
+						input(type="hidden" name="LEADCF15" value="<?php echo $query;?>"      max-length="250" placeholder="Поисковый запрос")
+						input(type="hidden" name="LEADCF13" value="<?php echo $actual_link?>" max-length="250" placeholder="Посадочная страница")
+						input(type="hidden" name="LEADCF17" value="<?php echo $referer;?>"    max-length="250" placeholder="Источник (реф.хвос)")
+						div.form__block.full--width
+							p.form__text__input Mihin aikaan Teidät tavoittaa parhaiten?
+							input.full--width(type="date" id="time" name="LEADCF91")
+						input.order.callback__order(type="submit" value="Отправить")
+			.hang(style="display:none")
+				img.hang__img(src="https://lh6.ggpht.com/5puZavg4x2pThSTJgos1sARWoARea7tzr_B8AWEwn2lV05RoXo9M8BM2XwcvwG6nIGc=w300", alt="")
+				p.hang__text В Hangouts можно общаться как в обычной жизни. Добавляйте в чат фотографии и смайлики и проводите групповые видеовстречи. Это бесплатно!
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/1.1.0/bootstrap-native.min.js")
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.min.js")
+			script(src="js/slideout.min.js")
+			script(src="js/tingle.js")
+			script(src="js/gumshoe.min.js")
+			script(src="js/jquery.periodpicker.full.min.js")
+			script(src="js/main.js")
+			script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVNcLZ6vMI8kKkJMRdU1sahNJKPs3RrPY&callback=initMap"
+			async defer)

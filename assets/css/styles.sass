@@ -8,9 +8,10 @@ body
 	font-family: 'Museo Sans'
 
 .container
-	width: 1190px
-	margin: 0 auto
+	max-width: 1190px
+	width: 100%
 	height: 100%
+	padding: 0 2rem
 
 a
 	cursor: pointer
@@ -54,6 +55,15 @@ input
 	&:hover
 		background: #fff
 		color: $green
+.price__order
+	background: $green
+	margin: auto
+	position: relative
+	top: -27px
+	z-index: 11
+	&:active
+		position: relative
+		top: -28px
 .map__order
 	background: #fff
 	margin: auto
@@ -94,14 +104,16 @@ input
 			text-decoration: none
 			font-weight: 500
 		.active
-			border-bottom: 1px solid
+			a
+				border-bottom: 1px solid
+
 
 
 
 //Шапка
 .header
+	padding: 20px 0
 	margin-top: 40px
-	height: 100px
 	box-shadow: 0 2px 8.4px 0.6px rgba(0, 0, 0, 0.11)
 	&__description
 		font-size: 14px
@@ -138,38 +150,110 @@ input
 			margin-bottom: 10px
 
 
-//Наши услуги
-.services
-	&__list
-		width: 70%
-		list-style: none
-		padding-top: 60px
-		li
-			text-indent: -.7em
-			padding: 0
-			margin: 0
-			cursor: pointer
-		li:before
-			content: '•'
-			color: $green
-			font-size: 30px
-			position: relative
-			top: 4px
-			right: 4px
-		hr
-			margin-top: 15px
+//Что такое имплантант
+.what
+	&__article
+		margin: 25px 0
+	&__image
+		img
+			background: #000
+			border-radius: 9px
+			width: 168px
+			height: 127px
 			border: none
-			border-top: 1px dotted #ccc
-
-
-//Наши гарантии
-.guarantee
-	background: url('../img/bg-guarantee.png') 50% 50% no-repeat
-	height: 480px
-	&__text
-		font-weight: 100
+	&__heading
+		color: $green
+		font-weight: 900
 		font-size: 18px
+	&__text
+		font-size: 16px
+		color: #525252
+		font-weight: 100
+	&__more
+		color: $green
+		font-size: 11px
+		text-transform: uppercase
+	.order
+		margin: 30px 0
+	.read-more-state
+		display: none
+	.read-more-target
+		opacity: 0
+		max-height: 0
+		font-size: 0
+		transition: .25s ease
+	.read-more-state
+		&:checked
+			~ .read-more-wrap .read-more-target
+				opacity: 1
+				font-size: inherit
+				max-height: 999em
+			~ .read-more-trigger:before
+				content: 'Свернуть'
+		~ .read-more-trigger:before
+			content: 'Развернуть'
+.read-more-trigger
+	cursor: pointer
+	display: inline-block
 
+
+.faq
+	background: #f7f7f8
+	&__block
+		margin: 10px 0
+		border-bottom: 1px solid #ccc
+		&__heading
+			font-weight: 100
+			font-size: 16px
+			width: 100%
+			padding: 5px
+			color: #525252
+			text-align: left
+		&__text
+			font-weight: 100
+			font-size: 16px
+			color: #525252
+			text-align: left
+	.order
+		margin: 30px 0
+	.read-more-state
+		display: none
+	.read-more-target
+		opacity: 0
+		max-height: 0
+		font-size: 0
+		transition: .25s ease
+	.read-more-state
+		&:checked
+			~ .read-more-wrap .read-more-target
+				opacity: 1
+				font-size: inherit
+				max-height: 999em
+			~ .read-more-trigger:before
+				content: ''
+		~ .read-more-trigger:before
+			content: ''
+	.read-more-trigger
+		cursor: pointer
+		display: inline-block
+
+
+
+//Услуги
+.services
+	padding-bottom: 40px
+	figure
+		margin: 20px 0
+	&__icon
+		color: $green
+		font-size: 60px
+	&__heading
+		color: #292929
+		font-size: 18px
+	&__text
+		color: #525252
+		font-size: 16px
+		font-weight: 100
 
 //Приходите на первую бесплатную консультацию
 .callback
@@ -179,11 +263,8 @@ input
 	&__block
 		background: url('../img/callback-block.png') no-repeat
 		height: 365px
-		padding: 0 50px
 		&__text
 		 font-size: 18px
-
-
 //Бесплатныя Онлайн консультация
 .free-consultation
 	padding-bottom: 60px
@@ -223,6 +304,41 @@ input
 	.none
 		&:after
 			display: none
+
+//Наши Кейсы
+.case
+	&__block
+		padding: 30px
+		&__image
+			border-radius: 9px
+			img
+				height: 147px
+			&__before
+				border-top-left-radius: 9px
+				border-bottom-left-radius: 9px
+			&__after
+				border-top-right-radius: 9px
+				border-bottom-right-radius: 9px
+		&__col
+			margin: 0
+			padding: 0
+		&__before--after
+			text-align: center
+			text-transform: uppercase
+			font-size: 11px
+		&__heading
+			color: $green
+			font-size: 18px
+			text-transform: uppercase
+		&__text
+			font-weight: 100
+			font-size: 16px
+			padding-bottom: 15px
+			border-bottom: 1px solid #ccc
+	.order
+		margin-bottom: 30px
+		display: inline-block
+
 
 //Форма обратного вызова 2
 .callback-2
@@ -307,6 +423,7 @@ input
 .review
 	position: relative
 	padding-bottom: 30px
+	background: #f7f7f8
 	.line
 		border-left: 1px solid #e4e4e4
 		height: 100%
@@ -324,7 +441,7 @@ input
 				content: ''
 				width: 20px
 				height: 20px
-				background: #fff
+				background: #f7f7f8
 				border: 1px solid #ccc
 				border-radius: 100%
 				display: inline-block
@@ -337,14 +454,15 @@ input
 .review__block:before
 	content: ''
 	width: 2px
-	left: 363px
+	left: 353px
 	bottom: 0
 	top: 0
 	background: rgba(0, 0, 0, 0.1)
 	position: absolute
-.new__review .item
+.new__review .item, .new__case .item
 	display: none
-
+.new__tr .item
+	display: none
 
 //О Клинике
 .about
@@ -411,6 +529,59 @@ input
 	.none:after
 		display: none
 
+//Anesthesia
+.anesthesia
+	padding-bottom: 30px
+	&__text
+		font-weight: 100
+		font-size: 16px
+		margin: 0
+		line-height: 22px
+	img
+		width: 100%
+
+//Цены
+.price
+	background: #2a3856
+	color: #fff
+	padding-bottom: 90px
+	.table
+		border-spacing: 0
+		th
+			border: 1px solid #66789f
+			border-left: none
+			border-right: none
+			padding: 15px 0
+			color: #66789f
+			width: 150px
+			text-align: left
+			font-weight: 100
+			text-align: center
+		th:first-child
+			width: 440px
+			text-align: left
+			padding-left: 40px
+		td
+			text-align: left
+			font-weight: 100
+			padding-top: 30px
+			text-align: center
+		td:first-child
+			text-align: left
+		.green
+			color: $green
+			font-weight: 900
+
+//О нас
+.about-us
+	padding-top: 60px
+	padding-bottom: 60px
+	position: relative
+	z-index: 2
+	background: #fff
+	&__image
+		img
+			margin: 10px
 
 // Карта
 #map
@@ -599,11 +770,149 @@ input
 	text-align: center
 
 
+.header-hamburger
+  width: 100%
+  height: 50px
+  display: none
+  background: #2a3755
+
+.toggle-menu
+  width: 100%
+  height: 100%
+  background: transparent
+  outline: none
+  border: none
+  cursor: pointer
+  div
+    font-size: 30px
+    color: #fff
+
+.fixed
+  backface-visibility: hidden
+  position: fixed
+  z-index: 2
+  top: 0
+  transition: transform 300ms ease
+
+.fixed-open
+  transform: translate3d(256px, 0px, 0px)
+#menu
+  .header__logo
+    padding: 20px 0
+  .row
+    height: initial
+  ul
+    padding: 0
+    margin: 0
+  a
+    color: #000
+    margin: 10px 0
+    display: inline-block
+    font-size: 18px
+    &:hover
+      color: #000
+      margin: 10px 0
+      display: inline-block
+      font-size: 18px
+
+
+
+
 @media (max-width: 1190px)
-	body, section, nav, header
-			width: 1190px
 	.row
 		margin-right: 0
 		margin-left: 0
 	.review__block:before
 		left: 360px
+@media (max-width: 1024px)
+	.hidden-sm
+		display: none
+	.offer
+		height: 100%
+		padding: 30px 0 
+	.row
+		margin-right: 0
+		margin-left: 0
+	.review__block:before, .review__block__image:before, .free-consultation__block::after
+		content: none
+	.callback
+		height: 100%
+		padding: 20px 0
+		background-size: cover
+	.callback__block
+		height: 100%
+		padding: 20px 50px
+		background: #fff
+		border-radius: 10px
+	.guarantee
+		background-size: cover
+	.callback-2__block__text--block
+		border-bottom-left-radius: 0px
+	.callback-2 .swiper-container .swiper-slide
+		border-top-right-radius: 9px
+	.header__callback__phone
+		margin: 0px 5px
+	.header-hamburger
+		display: block
+
+@media (max-width: 767px)
+	.step__block:after
+		content: none
+	.header__callback__phone
+		margin: 20px 5px
+	.socials
+		text-align: left
+	.tingle-modal-box
+		width: 70%
+	.tingle-modal-box__content
+		padding: 10px 3px
+
+#menu
+	.header__logo
+		padding: 20px 0
+	.row
+		height: initial
+	ul
+		padding: 0
+		margin: 0
+	a
+		color: #000
+		margin: 10px 0
+		display: inline-block
+		font-size: 18px
+		&:hover
+			color: #000
+			margin: 10px 0
+			display: inline-block
+			font-size: 18px
+
+.slideout-menu
+	position: fixed
+	top: 0
+	bottom: 0
+	width: 256px
+	min-height: 100vh
+	overflow-y: scroll
+	-webkit-overflow-scrolling: touch
+	z-index: 0
+	display: none
+
+.slideout-menu-left
+	left: 0
+
+.slideout-menu-right
+	right: 0
+
+.slideout-panel
+	position: relative
+	z-index: 1
+	/*will-change: transform;*/
+	background-color: #FFF
+	min-height: 100vh
+
+.slideout-open
+	overflow: hidden
+	body, .slideout-panel
+		overflow: hidden
+	.slideout-menu
+		display: block

@@ -39,6 +39,24 @@ $(document).ready(function() {
           $(".order-review").hide();
       }
   });
+  $(".order__case").on('click', function (e) {
+      e.preventDefault();
+      $(".new__case .item:hidden").slice(0, 1).slideDown();
+      if ($(".new__case .item:hidden").length == 0) {
+          $(".order__case").hide();
+      }
+  });
+   $(".price__order").on('click', function (e) {
+      e.preventDefault();
+      $(".new__tr .item:hidden").slice(0, 4).slideDown();
+      if ($(".new__tr .item:hidden").length == 0) {
+          $(".price__order").hide();
+      }
+  });
+
+  $(window).resize(function() {
+    slideout.close();
+  });
 
   $('.services__list li').on('click', function(){
     var image  = $(this).data('image');
@@ -46,6 +64,18 @@ $(document).ready(function() {
     $('.services img').attr('src', image);
     $('.services p').text(text);
   });
+});
+
+
+//SlideOut
+var slideout = new Slideout({
+  'panel': document.getElementById('panel'),
+  'menu': document.getElementById('menu'),
+  'padding': 256,
+  'tolerance': 70
+});
+document.querySelector('.toggle-menu').addEventListener('click', function() {
+  slideout.toggle();
 });
 gumshoe.init();
 
